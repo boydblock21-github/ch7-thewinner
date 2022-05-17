@@ -1,0 +1,47 @@
+$primary-01 : #717171;
+$primary-02 : #C4C4C4;
+
+
+$gray-01 : #0A0A0A;
+$gray-02 : #262626;
+$gray-03 : #2F2E36;
+$gray-04 : #8C8C8C;
+$gray-05 : #ADADAD;
+$gray-06 : #E8E8E8;
+$gray-07 : #ffffff;
+
+
+$error      : #DA0101;
+$success    : #029746;
+$info       : #027ABD;
+$warning    : #DF8600;
+
+$light      : #F6F8F7;
+$dark       : #000;
+
+
+///// Font Imports /////
+@font-face {
+  font-family: "Sukhumvit Set";
+  src:url('https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_tex-webfont.eot'); /* IE9 Compat Modes */
+  src:url('https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_tex-webfont.woff2') format('woff2'),
+      url('https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_tex-webfont.woff') format('woff'),
+      url('https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_tex-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+font-family: "Sukhumvit Set";
+src:url('https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_bol-webfont.eot'); /* IE9 Compat Modes */
+src:url('https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_bol-webfont.woff2') format('woff2'),
+  url('https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_bol-webfont.woff') format('woff'),
+  url('https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_bol-webfont.ttf') format('truetype');
+font-weight: bold;
+font-style: normal;
+}
+
+// Font stack ------------------
+$brand-font: "Sukhumvit Set", "Sukhumvit Set Text", Sukhumvit,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$body-font: -apple-system, Thonburi, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";

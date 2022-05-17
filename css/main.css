@@ -16,6 +16,109 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Sukhumvit Set";
+  src: url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_tex-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_tex-webfont.woff2") format("woff2"), url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_tex-webfont.woff") format("woff"), url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_tex-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sukhumvit Set";
+  src: url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_bol-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_bol-webfont.woff2") format("woff2"), url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_bol-webfont.woff") format("woff"), url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_bol-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sukhumvit Set";
+  src: url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_tex-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_tex-webfont.woff2") format("woff2"), url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_tex-webfont.woff") format("woff"), url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_tex-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sukhumvit Set";
+  src: url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_bol-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_bol-webfont.woff2") format("woff2"), url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_bol-webfont.woff") format("woff"), url("https://static-dev.bugaboo.tv/fonts/tadmai/sukhumvittadmai_bol-webfont.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.progress-bar {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+}
+
+.progress-bar small {
+  position: absolute;
+  color: #F6F8F7;
+  z-index: 1;
+  font-size: larger;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.progress-bar div {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.progress-bar div span {
+  position: absolute;
+  font-family: "Sukhumvit Set", "Sukhumvit Set Text", Sukhumvit, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 25px;
+  line-height: 75px;
+  height: 75px;
+  width: 75px;
+  left: 12.5px;
+  top: 12.5px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #717171;
+  color: transparent;
+}
+
+.progress-bar .rotate {
+  clip: rect(0 50px 100px 0);
+  background-color: #4b86db;
+}
+
+.progress-bar .left {
+  clip: rect(0 50px 100px 0);
+  opacity: 1;
+  background-color: #b3cef6;
+}
+
+.progress-bar .right {
+  clip: rect(0 50px 100px 0);
+  transform: rotate(180deg);
+  opacity: 0;
+  background-color: #4b86db;
+}
+
+@keyframes toggle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 *, *:after, *:before {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -46,15 +149,21 @@ body {
   }
 }
 
-a.btn.-width {
-  width: 40%;
-}
-
-a.btn.-btn-winner-primary {
+.btn.btn-winner-primary {
   color: #000;
   background-color: #C4C4C4;
   border-color: #C4C4C4;
   border-radius: .5rem;
+}
+
+.btn.btn-winner-primary.-width {
+  width: 40%;
+}
+
+@media only screen and (min-width: 1280px) {
+  .btn.btn-winner-primary.-width {
+    width: 30%;
+  }
 }
 
 .form-check-input.-custom {
