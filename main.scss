@@ -1,4 +1,4 @@
-$primary-01 : #03266E;
+$primary-01 : #717171;
 
 $gray-01 : #0A0A0A;
 $gray-02 : #262626;
@@ -262,4 +262,11 @@ $body-font: -apple-system, Thonburi, BlinkMacSystemFont, "Segoe UI", Roboto, "He
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  @include font-size(16);
+  font-family: $brand-font;
+  background-color: $light;
+  position: relative;
 }
