@@ -1,4 +1,6 @@
 $primary-01 : #717171;
+$primary-02 : #C4C4C4;
+
 
 $gray-01 : #0A0A0A;
 $gray-02 : #262626;
@@ -267,6 +269,40 @@ $body-font: -apple-system, Thonburi, BlinkMacSystemFont, "Segoe UI", Roboto, "He
 body{
   @include font-size(16);
   font-family: $brand-font;
-  background-color: $light;
+  background-color: $primary-01;
   position: relative;
 }
+.container{
+  &.-width{
+    width: 100%;
+    @include media-breakpoint-up(lg){
+      width: 70%;
+    }
+    @include media-breakpoint-up(xl){
+      width: 60%;
+    }
+  }
+}
+a{
+  &.btn{
+    &.-width{
+      width: 40%;
+    }
+    &.-btn-winner-primary{
+      color: $dark;
+      background-color: $primary-02;
+      border-color: $primary-02;
+      border-radius: .5rem;
+    }
+  }
+}
+.form-check-input{
+  &.-custom{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0;
+    background-color: transparent;
+    border: 1px solid $light;
+  }
+}
+
