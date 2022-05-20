@@ -14,20 +14,20 @@ body{
   background-color: $primary-01;
   position: relative;
 }
-.container{
+.container-fluid, .container{
   &.-width{
     width: 100%;
     @include media-breakpoint-up(lg){
-      width: 70%;
+      width: 80%;
     }
     @include media-breakpoint-up(xl){
-      width: 60%;
+      width: 100%;
     }
   }
 }
 .btn{
   &.btn-winner-primary{
-      color: $dark;
+      color: $light;
       background-color: $primary-02;
       border-color: $primary-02;
       border-radius: .5rem;
@@ -38,7 +38,17 @@ body{
         }
     }
   }
-
+  &.btn-winner-outline-primary {
+    color: $light;
+    border-color: $light;
+    border-radius: .5rem;
+    &.-width{
+      width: 40%;
+      @include media-breakpoint-up(xl){
+        width: 30%;
+      }
+    }
+  }
 }
 .form-check-input{
   &.-custom{
@@ -49,4 +59,111 @@ body{
     border: 1px solid $light;
   }
 }
-
+.form-control{
+  &.-width{
+    width: 50px;
+    height: 50px;
+  }
+  &.-bg{
+    background-color: transparent;
+  }
+  &.-color{
+    color: $light;
+  }
+}
+.ratio{
+  img{
+    &.img-fit{
+      object-fit: cover;
+      object-position: center;
+      overflow: hidden;
+    }
+  }
+  &.ratio-16x9{
+    &::before{
+      background-color: $dark;
+      width: 100%;
+    }
+  }
+  &.ratio-3x4{
+    --bs-aspect-ratio: calc(4 / 3 * 100%);
+    &.-icon{
+      &::after{
+        content: "";
+        background: url(../images/add-image.svg);
+        width: 42px;
+        height: 42px;
+        bottom: -10px;
+        right: -10px;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+  }
+}
+.icon-width{
+  width: 24px;
+  z-index: 1;
+  @include media-breakpoint-up(md){
+    width: calc(24px + 2vw);
+    height: auto;
+  }
+}
+.img-width{
+  width: 50%;
+  @include media-breakpoint-up(md){
+    width: 25%;
+  }
+}
+.icon-color{
+  filter: brightness(0) saturate(100%) invert(100%) sepia(95%) saturate(0%) hue-rotate(194deg) brightness(106%) contrast(104%);
+}
+.border{
+  &.-radius{
+    border-radius: .5rem;
+    border-style: dashed!important;
+  }
+}
+.bg-color{
+  background-color: $primary-01;
+  @include media-breakpoint-up(xl){
+   background-color: transparent;
+  }
+}
+.bg-image{
+  background-image: url(/images/the-winner-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 40%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  @include media-breakpoint-down(xl){
+    display: none;
+   }
+}
+.position-button{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  @include media-breakpoint-up(xl){
+    position: inherit;
+  }
+}
+.radius{
+  border-radius: .5rem;
+}
+.link-color{
+  color: $secondary;
+}
+.bg-transparent{
+  background-color: transparent;
+}
+.filter-white{
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(32%) hue-rotate(151deg) brightness(107%) contrast(107%);
+}
