@@ -14,17 +14,6 @@ body{
   background-color: $primary-01;
   position: relative;
 }
-.container-fluid, .container{
-  &.-width{
-    width: 100%;
-    @include media-breakpoint-up(lg){
-      width: 80%;
-    }
-    @include media-breakpoint-up(xl){
-      width: 100%;
-    }
-  }
-}
 .btn{
   &.btn-winner-primary{
       color: $light;
@@ -36,7 +25,17 @@ body{
         @include media-breakpoint-up(xl){
           width: 30%;
         }
-    }
+      }
+      &:hover{
+        color: $light;
+        background-color: $primary-03;
+        border-color: $primary-03;
+      }
+      &:focus{
+        color: $light;
+        box-shadow: 0 0 0 0.2rem rgba($primary-03, 0.5);
+      }
+
   }
   &.btn-winner-outline-primary {
     color: $light;
@@ -48,6 +47,70 @@ body{
         width: 30%;
       }
     }
+    &:hover{
+      color: $light;
+      background-color: $primary-03;
+      border-color: $primary-03;
+    }
+    &:focus{
+      color: $light;
+      box-shadow: 0 0 0 0.2rem rgba($primary-03, 0.5);
+    }
+  }
+}
+.container-fluid, .container{
+  &.-width{
+    width: 100%;
+    @include media-breakpoint-up(lg){
+      width: 80%;
+    }
+    @include media-breakpoint-up(xl){
+      width: 100%;
+    }
+  }
+}
+.header-containaer{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  @include media-breakpoint-up(md){
+    gap: 3rem;
+  }
+  // .progress-bar{
+  //   width: 34%;
+  //   @include media-breakpoint-up(md){
+  //     width: 100px;
+  //   }
+  // }
+  .info-header{
+    width: 67%;
+    @include media-breakpoint-up(md){
+      width: auto;
+    }
+  }
+}
+.needs-validation{
+  &.was-validated{
+    .form-control{
+      &:invalid{ 
+        border-color: $error !important;
+        border: 2px solid $error;
+      }
+      &:valid{
+        border-color: $success !important;
+        border: 2px solid $success;
+       }
+     }
+     .form-check{
+       .form-check-label{
+         color: $success;
+       }
+     }
+     .form-select{
+       border-color: $success !important;
+       border: 2px solid $success;
+     }
   }
 }
 .form-check-input{
@@ -58,18 +121,36 @@ body{
     background-color: transparent;
     border: 1px solid $light;
   }
+  
+}
+.form-select{
+  &:disabled{
+    background-color: $gray-05;
+    border: 1px solid $gray-05;
+    color: $gray-03;
+  }
 }
 .form-control{
-  &.-width{
-    width: 50px;
-    height: 50px;
+  &.-otp-number{
+    width: 60px;
+    height: 80px;
+    @include font-size(48);
+    font-weight: bold;
   }
-  &.-bg{
-    background-color: transparent;
-  }
-  &.-color{
-    color: $light;
-  }
+  // &.-width{
+  //   width: 50px;
+  //   height: 50px;
+  // }
+ 
+  // &.-bg{
+  //   background-color: transparent;
+  // }
+  // &.-color{
+  //   color: $light;
+  // }
+}
+.invalid-feedback{
+  color: $error;
 }
 .ratio{
   img{
@@ -124,12 +205,39 @@ body{
     border-style: dashed!important;
   }
 }
-.bg-color{
-  background-color: $primary-01;
-  @include media-breakpoint-up(xl){
-   background-color: transparent;
+.btn-bottom-container{
+  margin-top: 3rem;
+  .bg-color{
+    background-color: $primary-01;
+    @include media-breakpoint-up(xl){
+     background-color: transparent;
+    }
+    &.position-button{
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1030;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      @include media-breakpoint-up(md){
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      @include media-breakpoint-up(lg){
+        padding-left: 7rem;
+        padding-right: 7rem;
+      }
+      @include media-breakpoint-up(xl){
+        position: inherit;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+    
   }
 }
+
 .bg-image{
   background-image: url(/images/the-winner-bg.png);
   background-size: cover;
@@ -145,25 +253,17 @@ body{
     display: none;
    }
 }
-.position-button{
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1030;
-  @include media-breakpoint-up(xl){
-    position: inherit;
-  }
-}
+
 .radius{
   border-radius: .5rem;
 }
+
 .link-color{
   color: $secondary;
 }
-.bg-transparent{
-  background-color: transparent;
-}
+// .bg-transparent{
+//   background-color: transparent;
+// }
 .filter-white{
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(32%) hue-rotate(151deg) brightness(107%) contrast(107%);
 }

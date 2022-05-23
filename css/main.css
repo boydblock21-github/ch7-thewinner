@@ -133,22 +133,6 @@ body {
   position: relative;
 }
 
-.container-fluid.-width, .container.-width {
-  width: 100%;
-}
-
-@media only screen and (min-width: 1024px) {
-  .container-fluid.-width, .container.-width {
-    width: 80%;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .container-fluid.-width, .container.-width {
-    width: 100%;
-  }
-}
-
 .btn.btn-winner-primary {
   color: #F6F8F7;
   background-color: #0692DF;
@@ -164,6 +148,17 @@ body {
   .btn.btn-winner-primary.-width {
     width: 30%;
   }
+}
+
+.btn.btn-winner-primary:hover {
+  color: #F6F8F7;
+  background-color: #056EA8;
+  border-color: #056EA8;
+}
+
+.btn.btn-winner-primary:focus {
+  color: #F6F8F7;
+  box-shadow: 0 0 0 0.2rem rgba(5, 110, 168, 0.5);
 }
 
 .btn.btn-winner-outline-primary {
@@ -182,6 +177,75 @@ body {
   }
 }
 
+.btn.btn-winner-outline-primary:hover {
+  color: #F6F8F7;
+  background-color: #056EA8;
+  border-color: #056EA8;
+}
+
+.btn.btn-winner-outline-primary:focus {
+  color: #F6F8F7;
+  box-shadow: 0 0 0 0.2rem rgba(5, 110, 168, 0.5);
+}
+
+.container-fluid.-width, .container.-width {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container-fluid.-width, .container.-width {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container-fluid.-width, .container.-width {
+    width: 100%;
+  }
+}
+
+.header-containaer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-containaer {
+    gap: 3rem;
+  }
+}
+
+.header-containaer .info-header {
+  width: 67%;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-containaer .info-header {
+    width: auto;
+  }
+}
+
+.needs-validation.was-validated .form-control:invalid {
+  border-color: #FF0000 !important;
+  border: 2px solid #FF0000;
+}
+
+.needs-validation.was-validated .form-control:valid {
+  border-color: #13C225 !important;
+  border: 2px solid #13C225;
+}
+
+.needs-validation.was-validated .form-check .form-check-label {
+  color: #13C225;
+}
+
+.needs-validation.was-validated .form-select {
+  border-color: #13C225 !important;
+  border: 2px solid #13C225;
+}
+
 .form-check-input.-custom {
   width: 1.5rem;
   height: 1.5rem;
@@ -190,17 +254,22 @@ body {
   border: 1px solid #F6F8F7;
 }
 
-.form-control.-width {
-  width: 50px;
-  height: 50px;
+.form-select:disabled {
+  background-color: #ADADAD;
+  border: 1px solid #ADADAD;
+  color: #2F2E36;
 }
 
-.form-control.-bg {
-  background-color: transparent;
+.form-control.-otp-number {
+  width: 60px;
+  height: 80px;
+  font-size: 48px;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
-.form-control.-color {
-  color: #F6F8F7;
+.invalid-feedback {
+  color: #FF0000;
 }
 
 .ratio img.img-fit {
@@ -260,13 +329,49 @@ body {
   border-style: dashed !important;
 }
 
-.bg-color {
+.btn-bottom-container {
+  margin-top: 3rem;
+}
+
+.btn-bottom-container .bg-color {
   background-color: #0D182E;
 }
 
 @media only screen and (min-width: 1280px) {
-  .bg-color {
+  .btn-bottom-container .bg-color {
     background-color: transparent;
+  }
+}
+
+.btn-bottom-container .bg-color.position-button {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn-bottom-container .bg-color.position-button {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .btn-bottom-container .bg-color.position-button {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .btn-bottom-container .bg-color.position-button {
+    position: inherit;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -289,30 +394,12 @@ body {
   }
 }
 
-.position-button {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1030;
-}
-
-@media only screen and (min-width: 1280px) {
-  .position-button {
-    position: inherit;
-  }
-}
-
 .radius {
   border-radius: .5rem;
 }
 
 .link-color {
   color: #E7A704;
-}
-
-.bg-transparent {
-  background-color: transparent;
 }
 
 .filter-white {
