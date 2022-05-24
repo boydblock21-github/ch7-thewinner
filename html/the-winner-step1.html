@@ -35,7 +35,7 @@
                   <div class="ratio ratio-3x4 border -radius img-width d-flex justify-content-center align-items-center flex-column h-100 mx-auto">
                       <div class="d-flex justify-content-center align-items-center flex-column">
                         <a href="#" class="text-decoration-none text-white text-center">
-                          <img src="/images/upload-image.png" alt="" class="icon-width icon-color mb-2">
+                          <img src="../images/upload-image.png" alt="" class="icon-width icon-color mb-2">
                           <h3 class="fs-6 mb-0 text-">อัพโหลดรูป</h3>
                           <small class="fw-lighter opacity-50">ขนาดไฟล์ไม่เกิน 6 MB</small>
                         </a>
@@ -47,136 +47,146 @@
                   <label for="validationCustom01">เลขบัตรประชาชน<span>*</span></label>
                   <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom01" value="" required>
                   <div class="invalid-feedback">
-                    โปรดใส่ข้อมูลให้ถูกต้อง!
+                    กรุณากรอกข้อมูลให้ถูกต้อง
                   </div>
                 </div> 
                 <div class="py-2">
                   <label for="validationCustom02">ชื่อ - สกุล</label>
                   <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom02" value="" required>
                   <div class="invalid-feedback">
-                    โปรดใส่ข้อมูลให้ถูกต้อง!
+                    กรุณากรอก ชื่อ - สกุล
                   </div>
                 </div>
                 <div class="col-6 py-2">
                   <label for="validationCustom03">วัน / เดือน / ปีเกิด</label>
-                  <div class="input-group mb-3">
-                    <input type="date" class="form-control border-end-0" placeholder="00/00/0000" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <!-- <span class="input-group-text bg-transparent border-start-0" id="basic-addon2">
-                      <button type="button" class="border-0 bg-white px-0 bg-transparent">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-calendar-week" viewBox="0 0 16 16">
-                          <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
-                          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                        </svg>
-                      </button>
-                    </span> -->
-                  </div>              
+                  <input type="date" class="form-control -date-input" placeholder="dd/mm/yyyy" value="" required>
+                  <div class="invalid-feedback">
+                      กรุณากรอก วัน / เดือน / ปีเกิด
+                  </div>           
                 </div>
                 <div class="col-6 py-2">
                   <label for="validationCustom04">อายุ (ปี)</label>
                   <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom04" value="" required>
                   <div class="invalid-feedback">
-                    โปรดใส่ข้อมูลให้ถูกต้อง!
+                    กรุณากรอกข้อมูลอายุ
                   </div>
                 </div>
                 <div class="col-6 py-2">
                   <label for="validationCustom05">น้ำหนัก (กิโลกรัม)</label>
                   <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom05" value="" required>
                   <div class="invalid-feedback">
-                    โปรดใส่ข้อมูลให้ถูกต้อง!
+                    กรุณากรอกข้อมูลน้ำหนัก
                   </div>
                 </div>
                 <div class="col-6 py-2">
                   <label for="validationCustom06">ส่วนสูง (เซนติเมตร)</label>
                   <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom06" value="" required>
                   <div class="invalid-feedback">
-                    โปรดใส่ข้อมูลให้ถูกต้อง!
+                    กรุณากรอกข้อมูลส่วนสูง
                   </div>
                 </div>
                 <div class="col-6 py-2">
-                  <label for="validationCustom09">ศาสนา</label>
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected>กรุณาเลือกศาสนา</option>
+                  <label for="validationCustom07">ศาสนา</label>
+                    <select class="form-select" aria-label="Default select example" required>
+                      <option selected disabled value="">กรุณาเลือกศาสนา</option>
                       <option value="1">พุทธ</option>
                       <option value="2">คริสต์</option>
                       <option value="3">อิสลาม</option>
                     </select>
+                    <div class="invalid-feedback">
+                      กรุณาเลือกศาสนา
+                    </div>
                 </div>
                 <div class="col-6 py-2">
                   <label for="validationCustom08">สัญชาติ</label>
-                  <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom06" value="" required>
+                  <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom08" value="" required>
                   <div class="invalid-feedback">
-                    โปรดใส่ข้อมูลให้ถูกต้อง!
+                    กรุณากรอกข้อมูลสัญชาติ
                   </div>
                 </div>
                 <div class="col-6 py-2">
                   <label for="validationCustom09">Size เสื้อ</label>
                   <div class="d-flex"> 
-                    <select class="form-select me-3" aria-label="Default select example">
-                      <option selected>กรุณาเลือก size เสื้อ</option>
-                      <option value="1">S</option>
-                      <option value="2">M</option>
-                      <option value="3">L</option>
-                      <option value="4">XL</option>
-                      <option value="5">2XL</option>
-                      <option value="6">3Xl</option>
-                    </select>
-                    <a href="#" class="text-white my-auto">
+                    <div class="input-group">
+                      <select class="form-select me-3" aria-label="Default select example" required>
+                        <option selected disabled value="">กรุณาเลือก size เสื้อ</option>
+                        <option value="1">S</option>
+                        <option value="2">M</option>
+                        <option value="3">L</option>
+                        <option value="4">XL</option>
+                        <option value="5">2XL</option>
+                        <option value="6">3Xl</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        กรุณาเลือก Size เสื้อ
+                      </div>
+                    </div>
+                    <a href="#" class="text-white mt-2">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
                         <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
                       </svg>
                     </a>
                   </div>
+                  
                 </div>
                 <div class="col-6 py-2">
-                  <label for="validationCustom08">อาชีพ</label>
-                  <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom06" value="" required>
+                  <label for="validationCustom10">อาชีพ</label>
+                  <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom10" value="" required>
                   <div class="invalid-feedback">
-                    โปรดใส่ข้อมูลให้ถูกต้อง!
+                    กรุณากรอกข้อมูลอาชีพ
                   </div>
                 </div>
                 <div class="col-6 py-2">
-                  <label for="validationCustom09">กลุ่มเลือด</label>
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected>กรุณาเลือกกลุ่มเลือด</option>
+                  <label for="validationCustom11">กลุ่มเลือด</label>
+                    <select class="form-select" aria-label="Default select example" required>
+                      <option selected disabled value="">กรุณาเลือกกลุ่มเลือด</option>
                       <option value="1">A</option>
                       <option value="2">B</option>
                       <option value="3">AB</option>
                       <option value="4">O</option>
                     </select>
+                    <div class="invalid-feedback">
+                      กรุณาเลือกกลุ่มเลือด
+                    </div>
                 </div>
                 <div class="col-6 py-2">
-                  <label for="validationCustom08">โรคประจำตัว</label>
-                  <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom06" value="" required>
+                  <label for="validationCustom12">โรคประจำตัว</label>
+                  <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom12" value="" required>
                   <div class="invalid-feedback">
-                    โปรดใส่ข้อมูลให้ถูกต้อง!
+                    กรุณากรอกข้อมูลโรคประจำตัว
                   </div>
                 </div>
               </div>
               <div class="row mb-4">
                 <h2 class="fs-4 fw-bold">ข้อมูลการศึกษา</h2>
                 <div class="col-6 py-2">
-                  <label for="validationCustom08">ระดับชั้น</label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>กรุณาเลือกระดับชั้น</option>
+                  <label for="validationCustom13">ระดับชั้น</label>
+                  <select class="form-select" aria-label="Default select example" required>
+                    <option selected disabled value="">กรุณาเลือกระดับชั้น</option>
                     <option value="1">มัธยมศึกษาตอนต้น</option>
                     <option value="2">มัธยมศึกษาตอนปลาย</option>
                     <option value="3">ประกาศนียบัตรวิชาชีพ</option>
-                    <!-- <option value="3">Three</option> -->
                   </select>
+                  <div class="invalid-feedback">
+                    กรุณาเลือกระดับชั้น
+                  </div>
                 </div>
                 <div class="col-6 py-2">
-                  <label for="validationCustom09">สถาบัน</label>
-                  <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom09" value="" required>
+                  <label for="validationCustom14">สถาบัน</label>
+                  <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom14" value="" required>
                   <div class="invalid-feedback">
-                    โปรดใส่ข้อมูลให้ถูกต้อง!
+                    กรุณากรอกข้อมูลสถาบัน
                   </div>
                 </div>
               </div>
               <div class="row mb-4">
                   <h2 class="fs-4 fw-bold">ข้อมูการติดต่อ</h2>
                   <div class="py-2">
-                    <label for="validationCustom10">ที่อยู่</label>
-                    <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom10" value="">
+                    <label for="validationCustom15">ที่อยู่</label>
+                    <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom15" value="" required>
+                    <div class="invalid-feedback">
+                      กรุณากรอกข้อมูลที่อยู่
+                    </div>
                   </div> 
                   <div class="py-2">
                     <div class="form-check">
@@ -185,36 +195,39 @@
                         <h2 class="fs-6">ที่อยู่เดียวกับบัตรประชาชน</h2>
                       </label>
                     </div>
-                    <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom10" value="">
+                    <input class="form-control" type="text" placeholder="" aria-label="" id="validationCustom16" value="" disabled>
                   </div> 
                   <div class="col-6 py-2">
-                    <label for="validationCustom11">เบอร์โทรศัพท์</label>
-                    <input class="form-control" type="number" placeholder="" aria-label="" id="validationCustom11" value="" required>
+                    <label for="validationCustom17">เบอร์โทรศัพท์</label>
+                    <input class="form-control" type="number" placeholder="" aria-label="" id="validationCustom17" value="" required>
                     <!-- <small class="text-mute fst-italic">เฉพาะตัวเลขเท่่านั้น <span>(Only numbers)</span></small> -->
                     <div class="invalid-feedback">
-                      โปรดใส่ข้อมูลให้ถูกต้อง!
+                      กรุณากรอกเบอร์โทรศัพท์
                     </div>
                   </div>
                   <div class="col-6 py-2">
-                    <label for="validationCustom12">อีเมล์</label>
-                    <input class="form-control" type="email" placeholder="" aria-label="" id="validationCustom12" value="" required>
+                    <label for="validationCustom18">อีเมล</label>
+                    <input class="form-control" type="email" placeholder="" aria-label="" id="validationCustom18" value="" required>
                     <!-- <small class="text-mute fst-italic">email@example.com</small> -->
                     <div class="invalid-feedback">
-                      โปรดใส่ข้อมูลให้ถูกต้อง!
+                      กรุณากรอกอีเมล
                     </div>
                   </div>
                 </div>
                 <div class="row mb-4">
-                  <h2 class="fs-4 fw-bold">ประสบการณ์</h2>
+                  <h2 class="fs-4 fw-bold">เกียรติประวัติทางการกีฬา โดยเฉพาะฟุตบอล</h2>
                   <div class="py-2">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>          
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" value="" required></textarea> 
+                    <div class="invalid-feedback">
+                      กรุณากรอกเกียรติประวัติทางการกีฬา
+                    </div>         
                   </div>
                 </div>
             </form>
           </div>
           <div class="row btn-bottom-container mt-0">
             <div class="d-flex justify-content-end bg-color position-button">
-              <a href="the-winner-step2.html" type="button" class="btn btn-winner-primary -width my-4 py-2">ถัดไป <img src="/images/chevron-right.svg" alt="" class="icon-color"></a>
+              <a href="the-winner-step2.html" role="button" class="btn btn-winner-primary -width my-4 py-2">ถัดไป <img src="../images/chevron-right.svg" alt="" class="icon-color"></a>
             </div>
           </div>
 

@@ -133,57 +133,57 @@ body {
   position: relative;
 }
 
-.btn.btn-winner-primary {
+.btn-winner-primary {
   color: #F6F8F7;
   background-color: #0692DF;
   border-color: #0692DF;
   border-radius: .5rem;
 }
 
-.btn.btn-winner-primary.-width {
+.btn-winner-primary.-width {
   width: 40%;
 }
 
 @media only screen and (min-width: 1280px) {
-  .btn.btn-winner-primary.-width {
+  .btn-winner-primary.-width {
     width: 30%;
   }
 }
 
-.btn.btn-winner-primary:hover {
+.btn-winner-primary:hover {
   color: #F6F8F7;
   background-color: #056EA8;
   border-color: #056EA8;
 }
 
-.btn.btn-winner-primary:focus {
+.btn-winner-primary:focus {
   color: #F6F8F7;
   box-shadow: 0 0 0 0.2rem rgba(5, 110, 168, 0.5);
 }
 
-.btn.btn-winner-outline-primary {
+.btn-winner-outline-primary {
   color: #F6F8F7;
   border-color: #F6F8F7;
   border-radius: .5rem;
 }
 
-.btn.btn-winner-outline-primary.-width {
+.btn-winner-outline-primary.-width {
   width: 40%;
 }
 
 @media only screen and (min-width: 1280px) {
-  .btn.btn-winner-outline-primary.-width {
+  .btn-winner-outline-primary.-width {
     width: 30%;
   }
 }
 
-.btn.btn-winner-outline-primary:hover {
+.btn-winner-outline-primary:hover {
   color: #F6F8F7;
   background-color: #056EA8;
   border-color: #056EA8;
 }
 
-.btn.btn-winner-outline-primary:focus {
+.btn-winner-outline-primary:focus {
   color: #F6F8F7;
   box-shadow: 0 0 0 0.2rem rgba(5, 110, 168, 0.5);
 }
@@ -221,7 +221,7 @@ body {
   width: 67%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1440px) {
   .header-containaer .info-header {
     width: auto;
   }
@@ -241,7 +241,12 @@ body {
   color: #13C225;
 }
 
-.needs-validation.was-validated .form-select {
+.needs-validation.was-validated .form-select:invalid {
+  border-color: #FF0000 !important;
+  border: 2px solid #FF0000;
+}
+
+.needs-validation.was-validated .form-select:valid {
   border-color: #13C225 !important;
   border: 2px solid #13C225;
 }
@@ -252,6 +257,10 @@ body {
   margin-top: 0;
   background-color: transparent;
   border: 1px solid #F6F8F7;
+}
+
+.form-select {
+  border-radius: 0.25rem !important;
 }
 
 .form-select:disabled {
@@ -266,6 +275,16 @@ body {
   font-size: 48px;
   font-size: 3rem;
   font-weight: bold;
+}
+
+.form-control:disabled {
+  background-color: #ADADAD;
+  border: 1px solid #ADADAD;
+  color: #2F2E36;
+}
+
+.form-control.-date-input {
+  display: inline-flex;
 }
 
 .invalid-feedback {
@@ -285,6 +304,7 @@ body {
 
 .ratio.ratio-3x4 {
   --bs-aspect-ratio: calc(4 / 3 * 100%);
+  -webkit-appearance: none;
 }
 
 .ratio.ratio-3x4.-icon::after {
@@ -376,7 +396,7 @@ body {
 }
 
 .bg-image {
-  background-image: url(/images/the-winner-bg.png);
+  background-image: url(../images/the-winner-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
