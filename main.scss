@@ -14,6 +14,80 @@ body{
   background-color: $primary-01;
   position: relative;
 }
+
+.btn-winner-primary{
+  color: $light;
+  background-color: $primary-02;
+  border-color: $primary-02;
+  border-radius: .5rem;
+  &.-width{
+    width: 40%;
+    @include media-breakpoint-up(xl){
+      width: 30%;
+    }
+  }
+  &:hover{
+    color: $light;
+    background-color: $primary-03;
+    border-color: $primary-03;
+  }
+  &:focus{
+    color: $light;
+    box-shadow: 0 0 0 0.2rem rgba($primary-03, 0.5);
+  }
+  &.disabled{
+    background-color: $gray-09;
+    border-color: $gray-09;
+    opacity: 1;
+  }
+
+}
+.btn-winner-outline-primary {
+  color: $light;
+  border-color: $light;
+  border-radius: .5rem;
+  &.-width{
+    width: 40%;
+    @include media-breakpoint-up(xl){
+      width: 30%;
+    }
+  }
+  &:hover{
+    color: $light;
+    background-color: $primary-03;
+    border-color: $primary-03;
+  }
+  &:focus{
+    color: $light;
+    box-shadow: 0 0 0 0.2rem rgba($primary-03, 0.5);
+  }
+  &.disabled{
+    border-color: $gray-09;
+    opacity: 1;
+  }
+}
+
+.btn-winner-outline-secondary {
+  color: $primary-02;
+  border-color: $primary-02;
+  border-radius: .5rem;
+  &.-width{
+    width: 40%;
+    @include media-breakpoint-up(xl){
+      width: 30%;
+    }
+  }
+  &:focus{
+    color: $primary-02;
+    box-shadow: 0 0 0 0.2rem rgba($primary-03, 0.5);
+  }
+  &:hover{
+    color: $light;
+    background-color: $primary-03;
+    border-color: $primary-03;
+  }
+  
+}
 .container-fluid, .container{
   &.-width{
     width: 100%;
@@ -25,51 +99,103 @@ body{
     }
   }
 }
-.btn{
-  &.btn-winner-primary{
-      color: $light;
-      background-color: $primary-02;
-      border-color: $primary-02;
-      border-radius: .5rem;
-      &.-width{
-        width: 40%;
-        @include media-breakpoint-up(xl){
-          width: 30%;
-        }
-    }
+.header-containaer{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  @include media-breakpoint-up(md){
+    gap: 3rem;
   }
-  &.btn-winner-outline-primary {
-    color: $light;
-    border-color: $light;
-    border-radius: .5rem;
-    &.-width{
-      width: 40%;
-      @include media-breakpoint-up(xl){
-        width: 30%;
-      }
+  // .progress-bar{
+  //   width: 34%;
+  //   @include media-breakpoint-up(md){
+  //     width: 100px;
+  //   }
+  // }
+  .info-header{
+    width: 67%;
+    @include media-breakpoint-up(xxl){
+      width: auto;
     }
   }
 }
+
+.form-group{
+  margin-bottom: 1.25rem;
+  .text-danger{
+    color: $error !important;
+  }
+}
+
+.form-select{
+  border-radius: 0.25rem !important;
+  &:disabled{
+    background-color: $gray-08;
+    border: 1px solid $gray-08;
+    color: $gray-03;
+  }
+  &.is-invalid{
+    border: 2px solid $error !important;
+  }
+}
+
+.form-control{
+  &.is-invalid{
+    border: 2px solid $error !important;
+  }
+  &.-otp-number{
+    width: 60px;
+    height: 80px;
+    @include font-size(48);
+    font-weight: bold;
+    &.is-invalid{
+      padding: inherit;
+      background-image: none;
+    }
+
+  }
+  &:disabled{
+    background-color: $gray-08;
+    border: 1px solid $gray-08;
+    color: $gray-04;
+  }
+  &.-date-input{
+    display: inline-flex;
+  }
+}
+
 .form-check-input{
   &.-custom{
     width: 1.5rem;
     height: 1.5rem;
     margin-top: 0;
     background-color: transparent;
-    border: 1px solid $light;
+    border: 1px solid #F6F8F7;
   }
 }
-.form-control{
-  &.-width{
-    width: 50px;
-    height: 50px;
+
+.position-relative{
+  &.is-invalid{
+    border: 2px dashed $error;
   }
-  &.-bg{
-    background-color: transparent;
+}
+
+.phone-forgot-content{
+  .form-control{
+    @include media-breakpoint-up(md){
+      width: 70%;
+    }
   }
-  &.-color{
-    color: $light;
+  .text-danger{
+    display: block;
+    @include media-breakpoint-up(md){
+      width: 70%;
+    }
   }
+}
+.invalid-feedback{
+  color: $error;
 }
 .ratio{
   img{
@@ -81,12 +207,13 @@ body{
   }
   &.ratio-16x9{
     &::before{
-      background-color: $dark;
+      background-color: transparent;
       width: 100%;
     }
   }
   &.ratio-3x4{
     --bs-aspect-ratio: calc(4 / 3 * 100%);
+    -webkit-appearance: none;
     &.-icon{
       &::after{
         content: "";
@@ -100,7 +227,138 @@ body{
       }
     }
   }
+  &.-preview{
+    border: none;
+  }
+  
 }
+.ratio-upload{
+  border: 1px dashed $light;
+  border-radius: 0.5rem;
+  position: relative;
+  &.-success{
+    border: none;
+  }
+  &.is-invalid{
+    border: 1px dashed $error;
+  }
+  &.-video {
+    video{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.upload-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .input-browse{
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  &.-success{
+    .img-item{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .icon-width{
+      display: none;
+    }
+    .title{
+      display: none;
+    }
+    .sub-title{
+      display: none;
+    }
+    .input-browse{
+      display: none;
+    }
+  }
+}
+.upload-state-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  width: 100%;
+  .btn-cancel{
+    display: none;
+  }
+  .btn-delete{
+    display: none;
+  }
+  .name-file{
+    small{
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      /* autoprefixer: off */
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      max-height: 1.5rem;
+    }
+  }
+  &.-img{
+    justify-content: center;
+    .img-file{
+      display: none;
+    }
+    .name-file{
+      display: none;
+    }
+    .progress-container{
+      width: 10rem;
+    }
+  }
+  &.-video{
+    .control-left{
+      display: flex;
+      align-items: center;
+    }
+    .control-right{
+      display: flex;
+      align-items: center;
+    }
+    .img-file{
+      display: block;
+    }
+    .name-file{
+      max-width: 7rem;
+    }
+  }
+  &.-loading{
+    .btn-cancel{
+      display: block;
+    }
+  }
+  &.-success{
+    .progress-container{
+      .info-progress{
+        display: none;
+      }
+    }
+    .progress{
+      display: none;
+    }
+    .btn-delete{
+      display: block;
+    }
+  }
+}
+
 .icon-width{
   width: 24px;
   z-index: 1;
@@ -118,20 +376,46 @@ body{
 .icon-color{
   filter: brightness(0) saturate(100%) invert(100%) sepia(95%) saturate(0%) hue-rotate(194deg) brightness(106%) contrast(104%);
 }
-.border{
-  &.-radius{
-    border-radius: .5rem;
-    border-style: dashed!important;
-  }
-}
-.bg-color{
-  background-color: $primary-01;
-  @include media-breakpoint-up(xl){
-   background-color: transparent;
+// .border{
+//   &.-radius{
+//     border-radius: .5rem;
+//     border-style: dashed!important;
+//   }
+// }
+.btn-bottom-container{
+  margin-top: 3rem;
+  .bg-color{
+    background-color: $primary-01;
+    @include media-breakpoint-up(xl){
+     background-color: transparent;
+    }
+    &.position-button{
+      position: fixed;
+      right: 0;
+      bottom: -1px;
+      left: 0;
+      z-index: 1030;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      @include media-breakpoint-up(md){
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      @include media-breakpoint-up(lg){
+        padding-left: 7rem;
+        padding-right: 7rem;
+      }
+      @include media-breakpoint-up(xl){
+        position: inherit;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+    
   }
 }
 .bg-image{
-  background-image: url(/images/the-winner-bg.png);
+  background-image: url(../images/the-winner-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -145,25 +429,27 @@ body{
     display: none;
    }
 }
-.position-button{
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1030;
-  @include media-breakpoint-up(xl){
-    position: inherit;
-  }
-}
 .radius{
   border-radius: .5rem;
 }
+
 .link-color{
   color: $secondary;
 }
-.bg-transparent{
-  background-color: transparent;
+
+.progress-container{
+  margin: 0 0.75rem;
+  text-align: center;
+    .progress{
+      &.-upload{
+        height: 0.35rem;
+      }
+    }
 }
-.filter-white{
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(32%) hue-rotate(151deg) brightness(107%) contrast(107%);
-}
+// .bg-transparent{
+//   background-color: transparent;
+// }
+
+// .filter-white{
+//   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(32%) hue-rotate(151deg) brightness(107%) contrast(107%);
+// }
