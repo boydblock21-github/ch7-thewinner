@@ -353,7 +353,7 @@ body {
 }
 
 .ratio.ratio-16x9::before {
-  background-color: #000;
+  background-color: transparent;
   width: 100%;
 }
 

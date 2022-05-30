@@ -207,7 +207,7 @@ body{
   }
   &.ratio-16x9{
     &::before{
-      background-color: $dark;
+      background-color: transparent;
       width: 100%;
     }
   }
