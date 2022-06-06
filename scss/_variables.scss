@@ -1,7 +1,10 @@
 $primary-01 : #0D182E;
 $primary-02 : #0692DF;
 $primary-03 : #056EA8;
+$primary-04 : #5372DF;
+$accent : #CB3F58;
 $secondary : #E7A704;
+$secondary-02 : #50DDFC;
 
 
 $gray-01 : #0A0A0A;
@@ -21,6 +24,23 @@ $warning    : #DF8600;
 
 $light      : #F6F8F7;
 $dark       : #000;
+
+$line-height-lg   :     2;
+$line-height-base :   1.5;
+$line-height-sm   :   1.3;
+$line-height-xs   :     1;
+
+
+$font-size-base       : 16px;
+
+$font-size-xxl         : $font-size-base * 3;    // 48px (h1)
+$font-size-xl          : $font-size-base * 2.5;  // 40px (h2)
+$font-size-lg          : $font-size-base * 2;    // 32px (h3) 
+$font-size-md          : $font-size-base * 1.5;  // 24px (title)
+$font-size-sm          : $font-size-base * .875; // 14px (Badge-Date)
+$font-size-xs          : $font-size-base * .75;  // 12px (small)
+
+
 
 
 ///// Font Imports /////
