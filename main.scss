@@ -43,8 +43,8 @@ p{
 .title{
   font-size: $font-size-md;
   line-height: $line-height-sm;
-  @include media-breakpoint-down(sm){
-    font-size: 18px;
+  @include media-breakpoint-down(lg){
+    font-size: $font-size-base;
     font-weight: bold;
   }
 }
@@ -251,6 +251,9 @@ p{
 .-width{
   width: 100%;
   @include media-breakpoint-up(md){
+    width: 50%;
+  }
+  @include media-breakpoint-up(lg){
     width: 75%;
   }
 }
@@ -616,9 +619,14 @@ p{
 // }
 .bg-dark{
   &.-custom{
-   background-color: lighten($color: #212529, $amount: 10)!important;
+   background-color: rgba($gray-10, 0.2)!important;
+  }
+  &.-blur{
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 }
+
 .group-info{
   color: $secondary-02;
   border-left: 3px solid $secondary-02;
