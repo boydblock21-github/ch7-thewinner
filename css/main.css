@@ -339,7 +339,7 @@ p.paragraph {
 
 .nav-tabs .nav-link.-bg-first.active::after {
   content: "";
-  background-image: url(/images/border-blue.svg);
+  background-image: url(https://static.ch7.com/images/thewinner_2022/images/border-blue.svg);
   background-repeat: no-repeat;
   position: absolute;
   right: -25px;
@@ -367,7 +367,7 @@ p.paragraph {
 
 .nav-tabs .nav-link.-bg-second.active::after {
   content: "";
-  background-image: url(/images/border-blue-reverse.svg);
+  background-image: url(https://static.ch7.com/images/thewinner_2022/images/border-blue-reverse.svg);
   background-repeat: no-repeat;
   position: absolute;
   left: -25px;
