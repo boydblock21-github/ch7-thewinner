@@ -172,7 +172,7 @@ p{
         border-top-right-radius: 1.5rem;
         &::after{
           content: "";
-          background-image: url(https://static.ch7.com/images/thewinner_2022/images/border-blue.svg);
+          background-image: url(https://static.ch7.com/images/thewinner_2022/border-blue.svg);
           background-repeat: no-repeat;
           position: absolute;
           right: -25px;
@@ -196,7 +196,7 @@ p{
         border-top-right-radius: 1.5rem;
         &::after{
           content: "";
-          background-image: url(https://static.ch7.com/images/thewinner_2022/images/border-blue-reverse.svg);
+          background-image: url(https://static.ch7.com/images/thewinner_2022/border-blue-reverse.svg);
           background-repeat: no-repeat;
           position: absolute;
           left: -25px;
@@ -376,7 +376,7 @@ p{
     &.-icon{
       &::after{
         content: "";
-        background: url(https://static.ch7.com/images/thewinner_2022/images/add-image.svg);
+        background: url(https://static.ch7.com/images/thewinner_2022/add-image.svg);
         width: 42px;
         height: 42px;
         bottom: -10px;
@@ -574,7 +574,7 @@ p{
   }
 }
 .bg-image{
-  background-image: url(https://static.ch7.com/images/thewinner_2022/images/the-winner-bg.jpg);
+  background-image: url(https://static.ch7.com/images/thewinner_2022/the-winner-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -589,7 +589,7 @@ p{
    }
 }
 .bg-hilight{
-  background-image: url(https://static.ch7.com/images/thewinner_2022/images/bg-hilight.jpg);
+  background-image: url(https://static.ch7.com/images/thewinner_2022/bg-hilight.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
